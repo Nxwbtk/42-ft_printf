@@ -6,16 +6,15 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:46:44 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/06 21:16:03 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/19 17:00:44 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(int c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
 
 int	ft_putstr(char *s)
@@ -39,15 +38,18 @@ int ft_putnbr(int n)
 {
 	int		len;
 	char	c;
+	long	nb;
 
 	len = 0;
-	if (n == -2147483648)
-		return (ft_putstr("-2147483648"));
-	if (n < 0)
+	nb = (long)n;
+	if (nb < 0)
 	{
-		ft_putchar('-');
-		n = -n;
-		len++;
+		len += ft_putchar('-');
+		nb *= -1;
 	}
-	
+	if (nb >= 10)
+		len += ft_putnbr(nb / 10);
+	c = (nb % 10) + '0';
+	len += ft_putchar(c);
+	return (len);
 }
