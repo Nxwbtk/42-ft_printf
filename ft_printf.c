@@ -6,42 +6,43 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:38:34 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/19 16:58:42 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/19 23:54:11 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_fmt(char c, va_list arg)
+int	ft_fmt(const char c, va_list args)
 {
 	if (c == 'c')
-		return (ft_putchar(va_arg(arg, int)));
+		return (ft_putchar(va_arg(args, int)));
 	if (c == 's')
-		return (ft_putstr(va_arg(arg, char *)));
+		return (ft_putstr(va_arg(args, char *)));
 	if (c == 'd' || c == 'i')
-		return (ft_putnbr(va_arg(arg, int)));
+		return (ft_putnbr(va_arg(args, int)));
 	return (0);
 }
 
 int	ft_printf(const char *format, ...)
 {
-	int		i;
 	int		count;
-	va_list	arg;
+	int		i;
+	va_list	args;
 
-	va_start(arg, format);
-	i = 0;
+	va_start(args, format);
 	count = 0;
+	i = 0;
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			count += ft_fmt(format[i], arg);
+			count += ft_fmt(format[i], args);
 		}
 		else
 			count += ft_putchar(format[i]);
 		i++;
 	}
+	va_end(args);
 	return (count);
 }

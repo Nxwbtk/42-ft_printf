@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 10:58:52 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/19 16:52:30 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/19 23:44:13 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	main(void)
 	// count = ft_printf("%d\n", n);
 	// // ft_printf("%s\n", c);
 	// printf("%d\n", count);
-	ft_printf("%c%c%c*\n", '\0', '1', 1);
-	printf("%c%c%c*\n", '\0', '1', 1);
+	ft_printf("%c%c%c*\n", '\0', 'a', 69);
+	printf("%c%c%c*\n", '\0', 'a', 69);
 }

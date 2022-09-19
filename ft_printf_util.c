@@ -6,13 +6,13 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:46:44 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/19 17:00:44 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/19 23:58:34 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
+int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
 }
