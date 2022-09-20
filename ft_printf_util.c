@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:46:44 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/20 09:18:56 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/20 09:20:04 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	ft_uint(unsigned int n)
 		n *= -1;
 	}
 	if (n >= 10)
-		len += ft_unit(n / 10);
+		len += ft_uint(n / 10);
 	c = (n % 10) + '0';
 	len += ft_putchar(c);
 	return (len);
