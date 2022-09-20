@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:46:44 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/19 23:58:34 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/20 09:15:42 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,24 @@ int ft_putnbr(int n)
 	if (nb >= 10)
 		len += ft_putnbr(nb / 10);
 	c = (nb % 10) + '0';
+	len += ft_putchar(c);
+	return (len);
+}
+
+int	ft_unit(unsigned int n)
+{
+	int		len;
+	char	c;
+
+	len = 0;
+	if (n < 0)
+	{
+		len += ft_putchar('-');
+		n *= -1;
+	}
+	if (n >= 10)
+		len += ft_unit(n / 10);
+	c = (n % 10) + '0';
 	len += ft_putchar(c);
 	return (len);
 }

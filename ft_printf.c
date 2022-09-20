@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:38:34 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/19 23:54:11 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/20 09:13:27 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_fmt(const char c, va_list args)
 		return (ft_putstr(va_arg(args, char *)));
 	if (c == 'd' || c == 'i')
 		return (ft_putnbr(va_arg(args, int)));
+	if (c == 'u')
+		return (ft_uint(va_arg(args, unsigned int)));
 	return (0);
 }
 
