@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:38:58 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/20 09:18:03 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/20 09:19:01 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_putchar(char c);
 int	ft_strlen(char *s);
 int	ft_putstr(char *s);
 int ft_putnbr(int n);
-int	ft_unit(unsigned int n);
+int	ft_uint(unsigned int n);
 
 #endif

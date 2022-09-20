@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:46:44 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/20 09:15:42 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/20 09:18:56 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int ft_putnbr(int n)
 	return (len);
 }
 
-int	ft_unit(unsigned int n)
+int	ft_uint(unsigned int n)
 {
 	int		len;
 	char	c;
