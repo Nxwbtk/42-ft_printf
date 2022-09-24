@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:46:44 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/20 09:20:04 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/22 23:37:56 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_putstr(char *s)
 	return (len);
 }
 
-int ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
 	int		len;
 	char	c;
@@ -69,5 +69,14 @@ int	ft_uint(unsigned int n)
 		len += ft_uint(n / 10);
 	c = (n % 10) + '0';
 	len += ft_putchar(c);
+	return (len);
+}
+
+int	ft_point(unsigned long p)
+{
+	int	len;
+
+	len = 0;
+	len += write(1, "0x", 2);
 	return (len);
 }
