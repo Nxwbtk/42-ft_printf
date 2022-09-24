@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:38:34 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/24 16:41:22 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/24 23:38:01 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 int	ft_fmt(const char c, va_list args)
 {
+	int	count;
+
+	count = 0;
 	if (c == 'c')
 		return (ft_putchar(va_arg(args, int)));
 	if (c == 's')
@@ -24,10 +27,15 @@ int	ft_fmt(const char c, va_list args)
 		return (ft_uint(va_arg(args, unsigned int)));
 	if (c == 'p')
 	{
-		return (ft_point(va_arg(args, unsigned long)));
+		count += write(1, "0x", 2);
+		return (count += ft_point(va_arg(args, unsigned long)));
 	}
 	if (c == '%')
 		return (write(1, "%", 1));
+	if (c == 'x')
+		return (ft_xlek(va_arg(args, unsigned int)));
+	if (c == 'X')
+		return (ft_xyai(va_arg(args, unsigned int)));
 	return (0);
 }
 

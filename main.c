@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 10:58:52 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/24 17:50:08 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/24 23:38:26 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(void)
 	// {
 	// 	printf("%p\n", i);
 	// }
-	printf("%d\n", ft_printf("%p\n", 13));
-	printf("%p\n", 13);
+	ft_printf("%X\n", 300);
+	// printf("%d\n", ft_printf("%x\n", 300));
+	printf("%X\n", 300);
 }
