@@ -1,3 +1,5 @@
 Tester/
 main.c
 a.out
+*.o
+*.a
