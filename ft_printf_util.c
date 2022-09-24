@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:46:44 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/22 23:37:56 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:49:27 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,6 @@ int	ft_uint(unsigned int n)
 	char	c;
 
 	len = 0;
-	if (n < 0)
-	{
-		len += ft_putchar('-');
-		n *= -1;
-	}
 	if (n >= 10)
 		len += ft_uint(n / 10);
 	c = (n % 10) + '0';
@@ -74,9 +69,17 @@ int	ft_uint(unsigned int n)
 
 int	ft_point(unsigned long p)
 {
-	int	len;
+	int		len;
+	char	c;
 
 	len = 0;
 	len += write(1, "0x", 2);
+	if (p < 10)
+		len += ft_putnbr(p);
+	else if (p > 10 && p < 16)
+	{
+		c = (p - 10) + 'a';
+		len += ft_putchar(c);
+	}
 	return (len);
 }

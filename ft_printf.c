@@ -6,7 +6,7 @@
 /*   By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:38:34 by bsirikam          #+#    #+#             */
-/*   Updated: 2022/09/22 23:36:59 by bsirikam         ###   ########.fr       */
+/*   Updated: 2022/09/24 16:41:22 by bsirikam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	ft_fmt(const char c, va_list args)
 		return (ft_uint(va_arg(args, unsigned int)));
 	if (c == 'p')
 	{
-		
 		return (ft_point(va_arg(args, unsigned long)));
 	}
 	if (c == '%')

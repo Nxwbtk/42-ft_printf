@@ -6,7 +6,7 @@
 #    By: bsirikam <bsirikam@student.42bangkok.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/13 02:16:58 by bsirikam          #+#    #+#              #
-#    Updated: 2022/09/19 16:43:51 by bsirikam         ###   ########.fr        #
+#    Updated: 2022/09/24 17:39:19 by bsirikam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,5 +38,8 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+n:
+	@norminette ft*
 
 .PHONY: clean fclean re all
